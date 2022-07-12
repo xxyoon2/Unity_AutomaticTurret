@@ -351,8 +351,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Script/PlayerInput.cs"
-"Assets/Script/PlayerMovement.cs"
+"Assets/Script/Bullet/Bullet.cs"
+"Assets/Script/Player/PlayerHealth.cs"
+"Assets/Script/Player/PlayerInput.cs"
+"Assets/Script/Player/PlayerMovement.cs"
+"Assets/Script/Turret/Turret.cs"
 -langversion:9.0
 
 /deterministic
