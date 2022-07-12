@@ -10,28 +10,27 @@ public class Turret : MonoBehaviour
     public float randomTime = 0.0f;
     public float randomCount = 0.5f;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        //transform.Rotate(0f, 0.5f, 0f);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        scriptOutput += Time.deltaTime;
-        if(scriptOutput >= randomCount)
+        if (other.tag == "Player")
         {
-            scriptOutput = 0.0f;
-            randomCount = Random.Range(0.5f, 3f);
-            GameObject bullet = Instantiate(BulletPrefab, transform);
-            bullet.transform.LookAt(Player);
+            scriptOutput += Time.deltaTime;
+            if(scriptOutput >= randomCount)
+            {
+                scriptOutput = 0.0f;
+                randomCount = Random.Range(0.5f, 3f);
 
+                GameObject bullet = Instantiate(BulletPrefab, transform);
+                bullet.transform.LookAt(Player);
+            }
+
+            transform.LookAt(Player);
         }
-        
+
     }
 }
